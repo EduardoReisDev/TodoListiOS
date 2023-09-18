@@ -18,10 +18,6 @@ class TodoList: ObservableObject {
         tasks.remove(atOffsets: indices)
     }
 
-    func editTask(at index: Int, with newTask: String) {
-        tasks[index] = newTask
-    }
-
     func listTasks() -> [String] {
         return tasks
     }

@@ -16,10 +16,21 @@ struct ContentView: View {
         VStack {
             TextField("New Task", text: $newTask)
                 .padding()
-            Button("Add Task") {
+            
+            Button(action: {
                 toDoList.addTask(newTask)
                 newTask = ""
-            }
+                }) {
+                    Text("Add Task")
+                        .foregroundColor(Color.black)
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color(#colorLiteral(red: 0.9882352941, green: 0.6196078431, blue: 0.06274509804, alpha: 1)))
+                        .cornerRadius(10)
+                        .padding()
+                }
+                .padding(.horizontal)
             List {
                 ForEach(toDoList.tasks, id: \.self) { task in
                     Text(task)

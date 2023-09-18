@@ -29,12 +29,6 @@ class MyClassTests: XCTestCase {
         toDoList.deleteTask(at: IndexSet(integer: 0))
         XCTAssertEqual(toDoList.tasks.count, 0)
     }
-    
-    func testEditTask() {
-        toDoList.addTask("Task 1")
-        toDoList.editTask(at: 0, with: "Updated Task")
-        XCTAssertEqual(toDoList.tasks[0], "Updated Task")
-    }
 
     func testListTasks() {
         toDoList.addTask("Task 1")
