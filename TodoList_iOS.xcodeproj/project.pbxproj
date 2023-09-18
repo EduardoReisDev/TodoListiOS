@@ -14,6 +14,7 @@
 		65095DFA2AB77C83005F1D3E /* TodoList_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65095DF92AB77C83005F1D3E /* TodoList_iOSTests.swift */; };
 		65095E042AB77C83005F1D3E /* TodoList_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65095E032AB77C83005F1D3E /* TodoList_iOSUITests.swift */; };
 		65095E062AB77C83005F1D3E /* TodoList_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65095E052AB77C83005F1D3E /* TodoList_iOSUITestsLaunchTests.swift */; };
+		65095E132AB77CF9005F1D3E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65095E122AB77CF9005F1D3E /* TodoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		65095DFF2AB77C83005F1D3E /* TodoList_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoList_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65095E032AB77C83005F1D3E /* TodoList_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList_iOSUITests.swift; sourceTree = "<group>"; };
 		65095E052AB77C83005F1D3E /* TodoList_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		65095E122AB77CF9005F1D3E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				65095DEB2AB77C83005F1D3E /* Assets.xcassets */,
 				65095DED2AB77C83005F1D3E /* TodoList_iOS.entitlements */,
 				65095DEE2AB77C83005F1D3E /* Preview Content */,
+				65095E122AB77CF9005F1D3E /* TodoList.swift */,
 			);
 			path = TodoList_iOS;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65095E132AB77CF9005F1D3E /* TodoList.swift in Sources */,
 				65095DEA2AB77C82005F1D3E /* ContentView.swift in Sources */,
 				65095DE82AB77C82005F1D3E /* TodoList_iOSApp.swift in Sources */,
 			);

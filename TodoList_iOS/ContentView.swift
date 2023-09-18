@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var toDoList = TodoList()
+
+    @State private var newTask = ""
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            TextField("New Task", text: $newTask)
+                .padding()
+            Button("Add Task") {
+                toDoList.addTask(newTask)
+                newTask = ""
+            }
+            List {
+                ForEach(toDoList.tasks, id: \.self) { task in
+                    Text(task)
+                }
+                .onDelete(perform: toDoList.deleteTask)
+            }
         }
         .padding()
     }

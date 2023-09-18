@@ -7,29 +7,38 @@
 
 import XCTest
 
-final class TodoList_iOSTests: XCTestCase {
+@testable import TodoList_iOS;
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class MyClassTests: XCTestCase {
+
+    var toDoList: TodoList!
+
+    override func setUp() {
+        super.setUp()
+    toDoList = TodoList()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testAddTask() {
+        toDoList.addTask("Task 1")
+        XCTAssertEqual(toDoList.tasks.count, 1)
+        XCTAssertEqual(toDoList.tasks[0], "Task 1")
+    }
+    
+    func testDeleteTask() {
+        toDoList.addTask("Task 1")
+        toDoList.deleteTask(at: IndexSet(integer: 0))
+        XCTAssertEqual(toDoList.tasks.count, 0)
+    }
+    
+    func testEditTask() {
+        toDoList.addTask("Task 1")
+        toDoList.editTask(at: 0, with: "Updated Task")
+        XCTAssertEqual(toDoList.tasks[0], "Updated Task")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testListTasks() {
+        toDoList.addTask("Task 1")
+        toDoList.addTask("Task 2")
+        XCTAssertEqual(toDoList.listTasks(), ["Task 1", "Task 2"])
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
